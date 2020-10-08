@@ -1,26 +1,25 @@
-<div>
-	<app-widget-area title="Venezuela COVID-19 cases by states"></app-widget-area>
-</div>
+<mat-progress-spinner *ngIf="loading; else elseBlock" class="example-margin" color="primary" mode="indeterminate" value="50"></mat-progress-spinner>
 
-<hr>
+<ng-template #elseBlock
+class="layout-dashboard">
+	<div>
+		<app-widget-area title="COVID-19 cases by Countries"></app-widget-area>
+	</div>
 
-<div class="grid-container">
-	<mat-card fxFlex="25">
-		<app-widget-card label="Total Deaths" color="#FF0000" [total]="totalDeaths" [porcentage]="porcentageDeaths"></app-widget-card>
-	</mat-card>
-	<mat-card fxFlex="25">
-		<app-widget-card label="Total Actives" color="#00FF00" [total]="totalActive" [porcentage]="porcentageActives"></app-widget-card>
-	</mat-card>
-	<mat-card fxFlex="25">
-		<app-widget-card label="Total Recovered" [total]="totalRecovered" [porcentage]="porcentageRecovered"></app-widget-card>
-	</mat-card>
-</div>
+	<div class="grid-container">
+		<mat-card fxFlex="25">
+			<app-widget-card label="Total Confirmed" color="#FFD740" [total]="totalConfirmed" [porcentage]="porcentageConfirmed"></app-widget-card>
+		</mat-card>
+		<mat-card fxFlex="25">
+			<app-widget-card label="Total Deaths" color="#F44336" [total]="totalDeaths" [porcentage]="porcentageDeaths"></app-widget-card>
+		</mat-card>
+		<mat-card fxFlex="25">
+			<app-widget-card label="Total Recovered" color="#9C27B0" [total]="totalRecovered" [porcentage]="porcentageRecovered"></app-widget-card>
+		</mat-card>
+	</div>
 
-<hr> 
-
-<div>
 	<div>
 		<app-widget-pie [agesByRange]="confirmedByAge"></app-widget-pie>
 	</div>
-	<div></div>
-</div>
+</ng-template>
+

@@ -1,14 +1,24 @@
 import * as Highcharts from 'highcharts';
 import { Component, OnInit, Input } from '@angular/core';
+import { DATA_MODEL } from 'src/app/interfaces/age-by-range.interface';
+
+const DATA: DATA_MODEL[] = [
+	{ name: "Age 1-9", y: 20 },
+	{ name: "Age 10-29", y: 30 },
+	{ name: "Age 30-49", y: 45 }
+]
 
 @Component({
   selector: 'app-widget-pie',
   templateUrl: './pie.component.html',
   styleUrls: ['./pie.component.css']
 })
+
 export class PieComponent implements OnInit {
 
-  @Input() agesByRange: any;
+  @Input() agesByRange;
+
+  DATA_BY_AGES: DATA_MODEL[] = [];
 
   chartOptions: {};
 
@@ -48,7 +58,7 @@ export class PieComponent implements OnInit {
 	    series: [{
 	        name: 'Brands',
 	        colorByPoint: true,
-	        data: this.setDataSeries(this.agesByRange)
+	        data: DATA
 	    }]
 	};
 
@@ -56,13 +66,13 @@ export class PieComponent implements OnInit {
 		window.dispatchEvent(
 			new Event('resize'))
 	}, 300);
-  }
 
-  setDataSeries(data) {
-  	var series:number[] = [...];
-  	for (const k in data) {
-  		series.push(data[k])
-  	}
-  }
+  };
+  setSeries() {
+	for (const item in this.agesByRange) {
+		console.log("Ages " + item)
+		this.DATA_BY_AGES.push({ name: item, y: this.agesByRange[item] })
+	}
+  };
 
 }

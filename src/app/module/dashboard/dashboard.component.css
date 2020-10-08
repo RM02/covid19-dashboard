@@ -2,4 +2,19 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 10px;
+	margin-top: 10px;
+}
+
+.mat-card {
+	background: #ECEFF1
+}
+
+.example-margin {
+  margin: 35% auto;
+}
+
+.layout-dashboard {
+	display: grid;
+	grid-template-rows: repeat(3, 1fr);
+	grid-gap: 10px;
 }

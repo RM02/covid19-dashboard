@@ -5,7 +5,11 @@ import { Observable } from 'rxjs/internal/Observable'
 @Injectable({
   providedIn: 'root'
 })
+
+
 export class CoronavirusDataService {
+
+  url:string = 'https://api.covid19api.com/summary'
 
   constructor(private http: HttpClient) { }
 
@@ -14,7 +18,6 @@ export class CoronavirusDataService {
   })
 
   getSummary() {
-  	const url = 'https://covid19.patria.org.ve/api/v1/summary'
-    return this.http.get(url)
+    return this.http.get(this.url)
   }
 }

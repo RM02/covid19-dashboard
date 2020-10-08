@@ -6,10 +6,6 @@
 		    <mat-card-subtitle>rafamark244@gmail.com</mat-card-subtitle>
 		 </mat-card-header>
 	</mat-card>
-	<mat-card-header>
-		<h2 mat-card-subtitle>Pages</h2>
-	</mat-card-header>
-	<a mat-list-item> Dashboard </a>
-	<a mat-list-item> Profile </a>
-	<a mat-list-item> Contacts </a>
+
+	<a mat-list-item *ngFor="let route of routes" (click)="navigate(route.path)"> {{ route.name }} </a>
 </mat-nav-list>

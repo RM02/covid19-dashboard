@@ -6,3 +6,9 @@ export interface States {
 	"Sucre"?: number;
 	"Zulia"?: number;
 }
+
+export interface SERIE_MODEL {
+	name:string;
+	data: number[];
+	color:string;
+}

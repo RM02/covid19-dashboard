@@ -10,46 +10,48 @@ import { States } from 'src/app/interfaces/cases-by-states.interface';
 })
 export class DashboardComponent implements OnInit {
 
-  totalActive:number = null;
-  totalDeaths: number = null;
-  totalRecovered: number = null;
-  totalConfirmed: number = null;
-  porcentageDeaths:number = null;
-  porcentageActives:number = null;
-  porcentageRecovered:number = null;
+  totalDeaths: number;
+  totalRecovered: number;
+  totalConfirmed: number;
+  
+  porcentageDeaths:number;
+  porcentageActives:number;
+  porcentageRecovered:number;
 
   confirmedByAge: Ages = {};
   confirmedByStates: States = {};
+
+  loading: boolean = true;
+  value: number = 50;
 
   constructor(private dataApi: CoronavirusDataService) { }
 
   ngOnInit(): void {
   	this.getInfo()
-
+    setTimeout(() => {
+      this.loading = false
+    }, 1000);
   }
 
   getInfo() {
   	this.dataApi.getSummary()
   	.subscribe((data:any) => {
-      this.setDataByAge(data.Confirmed.ByAgeRange)
-      this.setTotalCases(data)
-      this.confirmedByStates = data.Confirmed.ByState
-  		/*this.porcentageDeaths = ((this.totalDeaths / this.totalConfirmed)*100).toFixed(2)*/
-      /*this.porcentageActives = ((this.totalActive / this.totalConfirmed)*100).toFixed(2)*/
-  		/*this.porcentageRecovered = ((this.totalRecovered / this.totalConfirmed)*100).toFixed(2)*/
+      this.setTotalCases(data.Global)
+      //this.setDataByAge(data.Confirmed.ByAgeRange)
+      //this.confirmedByStates = data.Confirmed.ByState
   	})
   };
 
   setDataByAge(data: Ages) {
-    for (const k in data) {
-      this.confirmedByAge[k] = data[k]
+    for (const item in data) {
+      this.confirmedByAge[item] = data[item]
     }
+
   };
 
   setTotalCases(data) {
-    this.totalConfirmed = data.Confirmed.Count
-    this.totalActive = data.Active.Count
-    this.totalDeaths = data.Deaths.Count
-    this.totalRecovered = data.Recovered.Count
+    this.totalConfirmed = data.TotalConfirmed
+    this.totalDeaths = data.TotalDeaths
+    this.totalRecovered = data.TotalRecovered
   }
 }

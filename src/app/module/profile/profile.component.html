@@ -1,0 +1,20 @@
+<mat-progress-spinner *ngIf="loading; else elseBlock" class="example-margin" color="primary" mode="indeterminate" value="50"></mat-progress-spinner>
+
+<ng-template #elseBlock>
+	<mat-card>
+		<mat-card-header>
+		    <mat-card-title>USER PROFILE</mat-card-title>
+		 </mat-card-header>
+	</mat-card>
+
+	<div class="example-container">
+		<mat-form-field>
+			<mat-label></mat-label>
+		</mat-form-field>
+		<p>First name</p>
+		<p>Last name</p>
+		<p>Address</p>
+		<p>Mail</p>
+		<p>Phone number</p>
+	</div>
+</ng-template>

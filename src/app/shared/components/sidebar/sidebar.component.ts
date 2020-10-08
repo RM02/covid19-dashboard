@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +8,30 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  constructor() { }
+  routes:any = [{
+  	name: 'Dashboard',
+  	path: 'dashboard'
+  },
+  {
+    name: 'Records',
+    path: 'records'
+  },
+  {
+  	name: 'Profile',
+  	path: 'profile'
+  }]
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  navigate(newRoute) {
+    if (newRoute == 'dashboard') {
+      this.router.navigate([''])
+    } else {
+        this.router.navigate([newRoute])
+    }
   }
 
 }

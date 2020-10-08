@@ -5,3 +5,21 @@
 ul li {
 	list-style: none;
 }
+
+.mat-list-item {
+	color: #CFD8DC;
+}
+.example-card {
+	background: #4CAF50;
+	color: #1DE9B6
+}
+
+.mat-card-subtitle {
+	background: #212121;
+	color: #C0CA33
+}
+
+.mat-card-title {
+	background: #212121;
+	color: #C0CA33
+}

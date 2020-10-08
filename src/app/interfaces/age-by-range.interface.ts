@@ -6,3 +6,8 @@ export interface Ages {
 	"40-49"?: number;
 	"50-59"?: number;
 }
+
+export interface DATA_MODEL {
+    name: string;
+    y: number;
+}

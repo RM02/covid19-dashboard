@@ -1,0 +1,9 @@
+.container {
+	display: grid;
+	grid-template-rows: 0.25fr 1fr;
+	grid-gap: 10px;
+}
+
+.example-margin {
+  margin: 35% auto;
+}

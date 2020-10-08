@@ -11,7 +11,7 @@ import { CoronavirusDataService } from 'src/app/services/coronavirus-data.servic
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
