@@ -15,11 +15,12 @@ export class SidebarComponent implements OnInit {
   {
     name: 'Records',
     path: 'records'
-  },
-  {
-  	name: 'Profile',
-  	path: 'profile'
-  }]
+  }
+ // {
+  //	name: 'Profile',
+  //	path: 'profile'
+ // }
+  ]
 
   constructor(private router: Router) { }
 

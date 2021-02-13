@@ -6,7 +6,7 @@
 
 mat-drawer {
 	width: 300px;
-	background: #000000
+	background: #fff
 }
 
 mat-drawer-container {
@@ -14,5 +14,6 @@ mat-drawer-container {
 }
 
 mat-drawer-content {
-	padding: 30px;
+	padding: 50px;
+	background-color: #e8eaf6
 }

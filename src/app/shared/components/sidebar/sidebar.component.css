@@ -4,22 +4,32 @@
 }
 ul li {
 	list-style: none;
+	padding: 15px
+}
+
+h3 {
+	font-size: 15px;
+	color: #90a4ae;
 }
 
 .mat-list-item {
-	color: #CFD8DC;
+	color: #90a4ae;
+	font-size: 15px;
+	padding: 35px
 }
 .example-card {
-	background: #212121;
+	background: #fff;
 	color: #1DE9B6
 }
 
 .mat-card-subtitle {
-	background: #212121;
-	color: #C0CA33
+	background: #fff;
+	color: #90a4ae;
+	font-size: 15px
 }
 
 .mat-card-title {
-	background: #212121;
-	color: #C0CA33
+	background: #fff;
+	color: #263238;
+	font-size: 25px
 }
