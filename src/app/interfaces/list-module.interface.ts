@@ -3,4 +3,5 @@ export interface Model {
   totalConfirmed: number;
   totalDeaths: number;
   totalRecovered: number;
+  status: string;
 }

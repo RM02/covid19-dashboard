@@ -7,3 +7,7 @@
 .example-margin {
   margin: 35% auto;
 }
+.mat-card-title {
+	font-size: 25px;
+	font-weight: 'bold'	
+}

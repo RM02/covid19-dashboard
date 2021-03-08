@@ -10,11 +10,13 @@ export class SidebarComponent implements OnInit {
 
   routes:any = [{
   	name: 'Dashboard',
-  	path: 'dashboard'
+  	path: 'dashboard',
+    iconName: 'dashboard'
   },
   {
     name: 'Records',
-    path: 'records'
+    path: 'records',
+    iconName: 'description'
   }
  // {
   //	name: 'Profile',

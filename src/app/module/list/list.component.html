@@ -1,11 +1,12 @@
-<mat-progress-spinner *ngIf="loading; else elseBlock" class="example-margin" color="primary" mode="indeterminate" value="50"></mat-progress-spinner>
+<mat-progress-spinner *ngIf="loading; else elseBlock" class="example-margin" color="accent" mode="indeterminate" value="50"></mat-progress-spinner>
 
 <ng-template #elseBlock>
 	<div class="container">
 		<div>
 			<mat-card>
 				<mat-card-header>
-				    <mat-card-title>Covid-19 Cases by Countries</mat-card-title>
+				    <mat-card-title>Covid-19 Cases</mat-card-title>
+				    <mat-card-subtitle>Table by countries</mat-card-subtitle>
 				 </mat-card-header>
 			</mat-card>
 		</div>

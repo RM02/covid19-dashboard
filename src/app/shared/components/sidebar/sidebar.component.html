@@ -5,7 +5,8 @@
 		    <mat-card-title>Rafael Marcano</mat-card-title>
 		    <mat-card-subtitle>Web Developer</mat-card-subtitle>
 		 </mat-card-header>
-		<h3>Main</h3>
 	</mat-card>
-	<a mat-list-item *ngFor="let route of routes" (click)="navigate(route.path)"> {{ route.name }} </a>
+	<div class="routes">
+		<a mat-list-item *ngFor="let route of routes" (click)="navigate(route.path)"><mat-icon aria-hidden="false" aria-label="Example home icon"> {{route.iconName}} </mat-icon> {{ route.name }} </a>
+	</div>
 </mat-nav-list>

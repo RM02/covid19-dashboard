@@ -31,7 +31,7 @@ export class ListComponent implements OnInit {
 
   setTableModel(data) {
     for (const element in data) {
-      this.model.push({ country: data[element].Country, totalConfirmed: data[element].TotalConfirmed, totalRecovered: data[element].TotalRecovered, totalDeaths: data.TotalDeaths })
+      this.model.push({ country: data[element].Country, totalConfirmed: data[element].TotalConfirmed, totalRecovered: data[element].TotalRecovered, totalDeaths: data.TotalDeaths, status: 'lock down' })
     }
   }
 

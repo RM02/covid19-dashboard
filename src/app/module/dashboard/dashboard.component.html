@@ -1,11 +1,7 @@
-<mat-progress-spinner *ngIf="loading; else elseBlock" class="example-margin" color="primary" mode="indeterminate" value="50"></mat-progress-spinner>
+<mat-progress-spinner *ngIf="loading; else elseBlock" class="example-margin" color="accent" mode="indeterminate" value="50"></mat-progress-spinner>
 
 <ng-template #elseBlock
 class="layout-dashboard">
-	<div>
-		<app-widget-area title="COVID-19 cases by Countries"></app-widget-area>
-	</div>
-
 	<div class="grid-container">
 		<mat-card fxFlex="25">
 			<app-widget-card label="Total Confirmed" color="#FFD740" [total]="totalConfirmed" [porcentage]="porcentageConfirmed"></app-widget-card>
@@ -19,6 +15,10 @@ class="layout-dashboard">
 	</div>
 
 	<div>
+		<app-widget-area title="COVID-19 cases by Countries"></app-widget-area>
+	</div>
+
+	<div class="pastel">
 		<app-widget-pie [agesByRange]="confirmedByAge"></app-widget-pie>
 	</div>
 </ng-template>

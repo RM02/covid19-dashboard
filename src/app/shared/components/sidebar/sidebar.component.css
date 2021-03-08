@@ -9,27 +9,35 @@ ul li {
 
 h3 {
 	font-size: 15px;
-	color: #90a4ae;
+	color: #fff;
 }
 
 .mat-list-item {
-	color: #90a4ae;
+	color: #607d8b;
 	font-size: 15px;
-	padding: 35px
+	padding-top: 0;
+	padding: 35px;
+	height: 100%;
 }
 .example-card {
-	background: #fff;
-	color: #1DE9B6
+	color: #fff;
+	background: #1565c0
 }
 
 .mat-card-subtitle {
-	background: #fff;
-	color: #90a4ae;
+	color: #f5f5f5;
 	font-size: 15px
 }
 
 .mat-card-title {
-	background: #fff;
-	color: #263238;
+	color: #fff;
 	font-size: 25px
+}
+
+.routes {
+	padding-top: 10px;
+}
+
+.mat-icon {
+	padding: 10px;
 }
